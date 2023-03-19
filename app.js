@@ -34,3 +34,44 @@ document.querySelector(".menuBar_responsive").onclick = () => {
   };
 
 
+  $(".button").click(function () {
+    $(".slider_box1").fadeToggle();
+    $(".slider_box2").fadeToggle();
+  });
+//   let twoPic = document.querySelector(".twoPic");
+// let prev = document.querySelector(".prev");
+// let next = document.querySelector(".next");
+// let index = 0;
+
+// const info = [
+//   {
+//     id: 1,
+//     img: "h1_hero1.jpg",
+//   },
+
+//   {
+//     id: 2,
+//     img: "h1_hero2.jpg",
+//   },
+
+// ];
+
+// next.addEventListener("click", () => {
+//   if (index == info.length - 1) {
+//     index = 0;
+//   } else {
+//     index++;
+//   }
+//   let infoImg = info[index].img;
+//   twoPic.innerHTML = ` <div class="image"><img src="/${infoImg}" /></div>`;
+// });
+
+// prev.addEventListener("click", () => {
+//   if (index == 0) {
+//     index = info.length - 1;
+//   } else {
+//     index--;
+//   }
+//   let infoImg = info[index].img;
+//   twoPic.innerHTML = ` <div class="image"><img src="/${infoImg}" /></div>`;
+// });
