@@ -242,3 +242,21 @@ let appendNumber = 8;
 
 
 
+  // // //  CUSTOMER // // // 
+  
+  
+
+
+  $(".prew_button").click(() => {
+    $(".customer_slider_item").fadeToggle(300);
+    $(".customer_slider_item").fadeToggle(800);
+  });
+  $(".next_button").click(() => {
+    $(".customer_slider_item").fadeToggle(300);
+    $(".customer_slider_item").fadeToggle(800);
+  });
+
+
+    
+
+
