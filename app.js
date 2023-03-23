@@ -78,133 +78,65 @@ document.querySelector(".menuBar_responsive").onclick = () => {
 
 
 
-
-// let fashionPro = [
-//   { 
-//     id:1,
-//     img:"./img/latest1.jpg",
-//   },
-//   { 
-//     id:2,
-//     img:"./img/latest2.jpg",
-//   },
-//   { 
-//     id:3,
-//     img:"./img/latest3.jpg",
-//   },
-//   { 
-//     id:4,
-//     img:"./img/latest4.jpg",
-//   },
-//   { 
-//     id:1,
-//     img:"./img/latest1.jpg",
-//   },
-//   { 
-//     id:1,
-//     img:"./img/latest1.jpg",
-//   },  
-// ]
+// // // TRENDING THIS WEEK // // //
 
 
-let fashionProduct = document.querySelector(".swiper-wrapper").innerHTML+=`
+let productsTrending=[ 
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Women", pic: "./img/latest1.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Women", pic: "./img/latest2.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Women", pic: "./img/latest3.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Women", pic: "./img/latest4.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Men", pic: "./img/latest1.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Men", pic: "./img/latest2.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Men", pic: "./img/latest3.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Men", pic: "./img/latest4.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Baby", pic: "./img/latest1.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Baby", pic: "./img/latest2.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Baby", pic: "./img/latest3.jpg",},
+   {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 ,  category: "Baby", pic: "./img/latest4.jpg",},
+  ];
+  let fashionProduct = document.querySelector(".fashion_products .swiper-wrapper");
+  productsTrending.forEach(product => {
+fashionProduct.innerHTML+=`
 <div class="swiper-slide">
-<img src="./img/latest1.jpg" />
+<img src="${product.pic}" />
 <div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+<a href="#"><i class="fa-solid fa-basket-shopping add_basket"></i></a>
 <a href="#"><i class="fa-regular fa-heart"></i></a>
 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
 </div>
 <div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
+<p>${product.name}</p>
+<span>${product.discount}.00 <span>${product.price}.00</span> </span>
 </div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest2.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest3.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest4.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest1.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest2.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest3.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-<div class="swiper-slide">
-<img src="./img/latest4.jpg" />
-<div class="slide_border">
-<a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-<a href="#"><i class="fa-regular fa-heart"></i></a>
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-</div>
-<div class="slide_text">
-<p>Cashmere Tank + Bag</p>
-<span>$98.00 <span>$120.00</span> </span>
-</div>
-</div>
-`
+</div>`
+    
+  });
+
+  let filter = document.querySelectorAll(".filter_trending");
+  filter.forEach((filterMen=>{
+    filterMen.addEventListener("click",()=>{
+      let filterTrending = [...productsTrending];
+      if(filterMen.innerHTML !="Fashion"){
+        filterTrending=filterTrending.filter(
+          (filterOBJ)=>filterOBJ.category==filterMen.innerHTML
+          );
+          console.log({filterTrending});
+      }
+    })
+  }))
+
+  let basket=[]
+  let basketButtons=document.querySelectorAll(".add_basket");
+  basketButtons.forEach((button,index) => {
+    button.addEventListener("click",()=>{
+      if (!basket.includes(products[index])) {
+        basket.push(products[index])
+        
+      }
+    })
+    
+  });
 
 let appendNumber = 8;
     let prependNumber = 1;
@@ -257,6 +189,79 @@ let appendNumber = 8;
   });
 
 
+
+
+
+  //  // // YOU MAY LIKE // // //
+
+
+
+  youMayLike_Products = [
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest5.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest6.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest7.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest8.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest5.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest6.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest7.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest8.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest5.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest6.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest7.jpg",},
+    {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest8.jpg",},
+  ]
+    
+  let youMayLike = document.querySelector("you_may_like_products .swiper-wrapper");
+  youMayLike_Products.forEach(product => {
+    youMayLike.innerHTML+=`
+    <div class="swiper-slide">
+    <img src="${product.pic}" />
+    <div class="slide_border">
+    <a href="#"><i class="fa-solid fa-basket-shopping add_basket"></i></a>
+    <a href="#"><i class="fa-regular fa-heart"></i></a>
+    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <div class="slide_text">
+    <p>${product.name}</p>
+    <span>${product.discount}.00 <span>${product.price}.00</span> </span>
+    </div>
+    </div>`
+        
+      });
+
+      let appendNumber1 = 8;
+    let prependNumber2 = 1;
+    const swiper2 = new Swiper('.swiper1', {
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // virtual: {
+      //   slides: (function () {
+      //     const slides = [];
+      //     for (var i = 0; i < 18; i += 1) {
+      //       slides.push({fashionProduct});
+      //     }
+      //     return slides;
+      //   })(),
+      // },
+    });
     
 
 
