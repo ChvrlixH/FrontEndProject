@@ -17,15 +17,19 @@
 
 
 let login = document.querySelector(".fa-user");
+let loginPage = document.querySelector(".loginPage");
 let loginForm = document.querySelector(".login-form-container");
 login.addEventListener("click", () => {
+  loginForm.classList.toggle("active");
+});
+
+loginPage.addEventListener("click", () => {
   loginForm.classList.toggle("active");
 });
 
 document.querySelector("#close-login-btn").onclick = () => {
   loginForm.classList.remove("active");
 };
-
 
 
 let menu = document.querySelector(".menuBar");
@@ -211,7 +215,7 @@ let appendNumber = 8;
     {  name: "Cashmere Tank + Bag",  price: "$"+120.00,  discount: "$"+98.00 , pic: "./img/latest8.jpg",},
   ]
     
-  let youMayLike = document.querySelector("you_may_like_products .swiper-wrapper");
+  let youMayLike = document.querySelector(".you_may_like_products .swiper-wrapper");
   youMayLike_Products.forEach(product => {
     youMayLike.innerHTML+=`
     <div class="swiper-slide">
@@ -231,7 +235,7 @@ let appendNumber = 8;
 
       let appendNumber1 = 8;
     let prependNumber2 = 1;
-    const swiper2 = new Swiper('.swiper1', {
+    const swiper1 = new Swiper('.swiper', {
       slidesPerView: 4,
       centeredSlides: false,
       spaceBetween: 30,
@@ -264,4 +268,23 @@ let appendNumber = 8;
     });
     
 
+    // // // SCROLL // // // 
+
+
+let scroll_btn = document.querySelector(".scroll_btn");
+
+scroll_btn.addEventListener("click", () => {
+  $("html, body").animate({ scrollTop: "0" });
+});
+
+window.addEventListener("scroll", () => {
+  if (
+    document.body.scrollTop > 250 ||
+    document.documentElement.scrollTop > 250
+  ) {
+    scroll_btn.style.display = "flex";
+  } else {
+    scroll_btn.style.display = "none";
+  }
+});
 
