@@ -1,21 +1,3 @@
-// window.onscroll = () => {
-//   if (window.scrollY > 80) {
-//     document.querySelector(".mainHeader").classList.add("active");
-//   } else {
-//     document.querySelector(".mainHeader").classList.remove("active");
-//   }
-// };
-
-// window.onload = () => {
-//   if (window.scrollY > 80) {
-//     document.querySelector(".mainHeader").classList.add("active");
-//   } else {
-//     document.querySelector(".mainHeader").classList.remove("active");
-//   }
-// };
-
-
-
 let login = document.querySelector(".fa-user");
 let loginPage = document.querySelector(".loginPage");
 let loginForm = document.querySelector(".login-form-container");
@@ -31,6 +13,18 @@ document.querySelector("#close-login-btn").onclick = () => {
   loginForm.classList.remove("active");
 };
 
+
+
+let basketContainer = document.querySelector(".basket-container");
+let basketIcon = document.querySelector(".fa-cart-shopping");
+
+basketIcon.addEventListener("click",()=>{
+  basketContainer.classList.toggle("active");
+});
+
+document.querySelector(".basketXicon").onclick = () => {
+  basketContainer.classList.remove("active");
+};
 
 let menu = document.querySelector(".menuBar");
 document.querySelector(".menuBar_responsive").onclick = () => {
@@ -122,11 +116,45 @@ fashionProduct.innerHTML+=`
     filterMen.addEventListener("click",()=>{
       let filterTrending = [...productsTrending];
       if(filterMen.innerHTML !="Fashion"){
+        fashionProduct.innerHTML="";
         filterTrending=filterTrending.filter(
           (filterOBJ)=>filterOBJ.category==filterMen.innerHTML
           );
+          filterTrending.forEach(products=>{
+            fashionProduct.innerHTML+=`
+            <div class="swiper-slide">
+<img src="${products.pic}" />
+<div class="slide_border">
+<a href="#"><i class="fa-solid fa-basket-shopping add_basket"></i></a>
+<a href="#"><i class="fa-regular fa-heart"></i></a>
+<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+</div>
+<div class="slide_text">
+<p>${products.name}</p>
+<span>${products.discount}.00 <span>${products.price}.00</span> </span>
+</div>
+</div>
+            `
+          })
           console.log({filterTrending});
-      }
+        }
+
+        else{
+          productsTrending.forEach(product => {
+            fashionProduct.innerHTML+=`
+            <div class="swiper-slide">
+            <img src="${product.pic}" />
+            <div class="slide_border">
+            <a href="#"><i class="fa-solid fa-basket-shopping add_basket"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="slide_text">
+            <p>${product.name}</p>
+            <span>${product.discount}.00 <span>${product.price}.00</span> </span>
+            </div>
+            </div>`});
+        }
     })
   }))
 

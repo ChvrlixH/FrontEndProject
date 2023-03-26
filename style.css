@@ -175,13 +175,69 @@ li {
 }
 
 .navBar_icon_li {
-  padding: 0 10px;
+  padding: 0px 10px;
   font-size: 1.6rem;
 }
 
 .navBar_icon_li_a:hover {
   color: #ff2020;
   transition: all 0.2s;
+}
+
+.navBar_icon_li_a sup{
+  border: 1px solid #ff2020;
+  padding: 0px 4px;
+  margin-left: 25px;
+  border-radius: 50%;
+  background-color: #ff2020;
+  color: #fff;
+  font-size: 13px;
+  position: absolute;
+}
+
+
+/* BASKET */
+
+
+.basket-container{
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.basket-container .total_basket{
+  background: #fff;
+  border: 1px solid grey;
+  width: 40rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+
+.basket-container .total_basket .fa-times{
+  cursor: pointer;
+}
+
+.basket-container .total_basket .basketXicon{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.basket-container.active{
+  display: flex;
+}
+
+.basket_main #basketEmpty{
+  display: flex;
+  justify-content: center;
 }
 
 /* LOGIN  */
